@@ -26,6 +26,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
+                                <connections>
+                                    <action selector="priorityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="J6R-q8-siK"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIL-bJ-CLJ">
                                 <rect key="frame" x="0.0" y="121" width="414" height="775"/>
@@ -112,8 +115,16 @@
                         <viewLayoutGuide key="safeArea" id="PRI-4z-Smz"/>
                     </view>
                     <navigationItem key="navigationItem" id="vOl-DQ-gsY">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="EGn-ra-d1u"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="EGn-ra-d1u">
+                            <connections>
+                                <action selector="saveTask:" destination="I3z-uj-Gfi" id="gKH-3y-agd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="prioritySegmentedControl" destination="fyg-oc-VfI" id="sBN-zc-fWI"/>
+                        <outlet property="taskTextField" destination="rC2-av-O4q" id="z84-R8-6J6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZS-QI-oO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
