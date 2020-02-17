@@ -58,7 +58,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TODO List" id="trN-2X-xMs">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZEs-fT-Y52"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZEs-fT-Y52">
+                            <connections>
+                                <action selector="addNewTask:" destination="BYZ-38-t0r" id="FtB-4K-V8X"/>
+                                <segue destination="CUy-Rq-bCK" kind="presentation" id="dfD-WN-FdO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="segmentedControl" destination="eon-7C-UYc" id="j8m-DW-3kp"/>
@@ -68,6 +73,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="105.80357142857143"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="fBj-4q-7va">
+            <objects>
+                <viewController id="I3z-uj-Gfi" customClass="AddTaskViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ERi-IP-5T4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fyg-oc-VfI">
+                                <rect key="frame" x="104" y="56" width="206" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="nzz-Ts-xAu"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rC2-av-O4q">
+                                <rect key="frame" x="107" y="404" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0z6-Wo-my8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rC2-av-O4q" firstAttribute="centerX" secondItem="ERi-IP-5T4" secondAttribute="centerX" id="53U-FC-6HC"/>
+                            <constraint firstItem="rC2-av-O4q" firstAttribute="centerY" secondItem="ERi-IP-5T4" secondAttribute="centerY" id="OeF-I1-exI"/>
+                            <constraint firstItem="fyg-oc-VfI" firstAttribute="centerX" secondItem="ERi-IP-5T4" secondAttribute="centerX" id="n3q-m5-jj5"/>
+                            <constraint firstItem="fyg-oc-VfI" firstAttribute="top" secondItem="PRI-4z-Smz" secondAttribute="top" id="tYu-bO-iRT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PRI-4z-Smz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vOl-DQ-gsY">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="EGn-ra-d1u"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZS-QI-oO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060.8695652173915" y="31.473214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Yl-Do-EUv">
@@ -86,6 +136,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blb-6H-hM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c8B-4n-YYF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CUy-Rq-bCK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hC6-x3-NNB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HO8-7y-uKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I3z-uj-Gfi" kind="relationship" relationship="rootViewController" id="Ld9-qE-4uq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-IB-hD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150.7246376811595" y="31.473214285714285"/>
         </scene>
     </scenes>
 </document>

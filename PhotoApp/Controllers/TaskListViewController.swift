@@ -14,6 +14,17 @@ class TaskListViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    
+    @IBAction func addNewTask(_ sender: Any) {
+        
+    }
+    
 }
 
 extension TaskListViewController: UITableViewDataSource {

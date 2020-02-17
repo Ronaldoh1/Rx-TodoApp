@@ -27,6 +27,7 @@
 		FA6556C023F0C04B00C57E22 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6556B323F0C04B00C57E22 /* SnapKit.framework */; };
 		FA6556C123F0C04B00C57E22 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6556B323F0C04B00C57E22 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAAC5E7023FA234100AF5BFF /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC5E6F23FA234100AF5BFF /* TaskListViewController.swift */; };
+		FAAC5E7323FA2A6300AF5BFF /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC5E7223FA2A6300AF5BFF /* AddTaskViewController.swift */; };
 		FAF6667423F1610D00EB5663 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6667323F1610D00EB5663 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		FA6556B223F0C04A00C57E22 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		FA6556B323F0C04B00C57E22 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		FAAC5E6F23FA234100AF5BFF /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		FAAC5E7223FA2A6300AF5BFF /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		FAF6667323F1610D00EB5663 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAC5E6F23FA234100AF5BFF /* TaskListViewController.swift */,
+				FAAC5E7223FA2A6300AF5BFF /* AddTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAC5E7023FA234100AF5BFF /* TaskListViewController.swift in Sources */,
+				FAAC5E7323FA2A6300AF5BFF /* AddTaskViewController.swift in Sources */,
 				FA65567C23F0972B00C57E22 /* AppDelegate.swift in Sources */,
 				FAF6667423F1610D00EB5663 /* SceneDelegate.swift in Sources */,
 			);
