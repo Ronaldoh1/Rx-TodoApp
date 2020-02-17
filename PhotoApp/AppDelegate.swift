@@ -15,25 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let bag = DisposeBag()
-        
-        let subject = PublishSubject<String>()
-        let trigger = PublishSubject<String>()
-        
-        subject.takeUntil(trigger)
-            .subscribe { print( $0)}
-            .disposed(by: bag)
-
-        subject.onNext("1")
-        subject.onNext("2")
-        subject.onNext("3")
-        
-        
-        trigger.onNext("X")
-      
-        subject.onNext("4")
-        subject.onNext("5")
         
         
         return true

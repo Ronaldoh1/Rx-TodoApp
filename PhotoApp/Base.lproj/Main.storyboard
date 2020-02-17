@@ -7,19 +7,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera Filter-->
+        <!--TODO List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TaskListViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eon-7C-UYc">
+                                <rect key="frame" x="69.5" y="88" width="275" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="yir-zg-D8q"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIL-bJ-CLJ">
+                                <rect key="frame" x="0.0" y="121" width="414" height="775"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9pG-Dw-azb">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pG-Dw-azb" id="uf2-dk-dO0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YCz-Dd-5DD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KT0-eB-epq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vIL-bJ-CLJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Pi-8f-JN5"/>
+                            <constraint firstItem="eon-7C-UYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OyI-oR-ctX"/>
+                            <constraint firstItem="vIL-bJ-CLJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SMR-sy-lSb"/>
+                            <constraint firstItem="vIL-bJ-CLJ" firstAttribute="top" secondItem="eon-7C-UYc" secondAttribute="bottom" constant="2" id="Tx3-Rw-QaG"/>
+                            <constraint firstAttribute="bottom" secondItem="vIL-bJ-CLJ" secondAttribute="bottom" id="VSG-el-uze"/>
+                            <constraint firstItem="eon-7C-UYc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qdc-Zw-nZH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera Filter" id="trN-2X-xMs">
+                    <navigationItem key="navigationItem" title="TODO List" id="trN-2X-xMs">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZEs-fT-Y52"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="eon-7C-UYc" id="j8m-DW-3kp"/>
+                        <outlet property="tableView" destination="vIL-bJ-CLJ" id="M9Q-Dv-RAP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
